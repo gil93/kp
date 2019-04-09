@@ -4,7 +4,7 @@
   "description": "King & Partners fun",
   "main": "src/index.js",
   "scripts": {
-    "dev": "NODE_ENV=development webpack",
+    "dev": "webpack-dev-server --open",
     "build": "NODE_ENV=production webpack"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.3.0"
   }
 }
