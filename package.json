@@ -4,8 +4,8 @@
   "description": "King & Partners fun",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack NODE_ENV=development",
-    "build": "webpack NODE_ENV=production"
+    "dev": "NODE_ENV=development webpack",
+    "build": "NODE_ENV=production webpack"
   },
   "repository": {
     "type": "git",
