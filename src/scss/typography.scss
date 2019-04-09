@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Jost-Light";
+    src: url("./../assets/fonts/jost-300-light.ttf") format("truetype"),
+         url("./../assets/fonts/jost-300-light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost-Light-Italic";
+    src: url("./../assets/fonts/jost-300-lightitalic.ttf") format("truetype"),
+         url("./../assets/fonts/jost-300-lightitalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Jost-Book";
+    src: url("./../assets/fonts/jost-400-book.ttf") format("truetype"),
+         url("./../assets/fonts/jost-400-book.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost-Book-Italic";
+    src: url("./../assets/fonts/jost-400-bookitalic.ttf") format("truetype"),
+         url("./../assets/fonts/jost-400-bookitalic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Jost-Bold";
+    src: url("./../assets/fonts/jost-700-bold.ttf") format("truetype"),
+         url("./../assets/fonts/jost-700-bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Jost-Bold-Italic";
+    src: url("./../assets/fonts/jost-700-bolditalic.ttf") format("truetype"),
+         url("./../assets/fonts/jost-700-bolditalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+$jost-light: "Jost-Light";
+$jost-light-italic: "Jost-Light-Italic";
+
+$jost-book: "Jost-Book";
+$jost-book-italic: "Jost-Book-Italic";
+
+$jost-bold: "Jost-Bold";
+$jost-bold-italic: "Jost-Bold-Italic";

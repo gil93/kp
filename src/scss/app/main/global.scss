@@ -1,0 +1,24 @@
+.main {
+	height: 100vh;
+
+	&.fade-in,
+	.fade-in {
+		transform: translateY(-25px);
+		opacity: 0;
+	}
+	&.faded,
+	.faded {
+		animation: faded .3s forwards ease-out;
+	}
+}
+
+@keyframes faded {
+	from {
+		transform: translateY(-25px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
