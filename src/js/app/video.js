@@ -18,6 +18,8 @@ export default class App extends Component {
 
 			</video>
 
+			<div className="gradient"></div>
+
 		</div>
 
 	}
