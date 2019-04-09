@@ -4,7 +4,11 @@ import ReactDOM from 'react-dom';
 
 import Button from './button';
 
-export default class Intro extends Component {
+import FadeIn from './fade-in';
+
+@FadeIn
+
+class Intro extends Component {
 
 	render() {
 
@@ -34,3 +38,5 @@ export default class Intro extends Component {
 	}
 
 }
+
+export default Intro;

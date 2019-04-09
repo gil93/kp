@@ -1,0 +1,23 @@
+.fade-in {
+	position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+	transform: translateY(-25px);
+	opacity: 0;
+}
+.faded {
+	animation: faded .3s forwards ease-out;
+}
+
+@keyframes faded {
+	from {
+		transform: translateY(-25px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

@@ -12,33 +12,11 @@ export default class App extends Component {
 
 		super( props );
 
-		this.state = { ...props, loaded: false };
-
-		this.mainRef = React.createRef();
-
-	}
-
-	componentDidMount() {
-
-		const { loaded } = this.state;
-
-		console.log( this );
-
-		if ( ! loaded ) {
-
-			const $el = this.mainRef.current;
-
-			$el.classList.add( 'faded' );
-
-			this.setState( () => { loaded: true });
-
-		}
-
 	}
 
 	render() {
 
-		return <div ref={this.mainRef} className="main fade-in">
+		return <div ref={this.mainRef} className="main">
 
 			<Video />
 

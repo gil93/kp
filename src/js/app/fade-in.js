@@ -2,45 +2,45 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 
-export default class App extends Component {
+export default function FadeIn( Wrapped ) {
 
-	// https://reactjs.org/docs/higher-order-components.html
+	return class HOC extends Component {
 
-	constructor( props ) {
+		constructor( props ) {
 
-		super( props );
+			super( props );
 
-		this.state = { ...props, loaded: false };
+			this.state = { ...props, loaded: false };
 
-		this.mainRef = React.createRef();
-
-	}
-
-	componentDidMount() {
-
-		const { loaded } = this.state;
-
-		console.log( this );
-
-		if ( ! loaded ) {
-
-			const $el = this.mainRef.current;
-
-			$el.classList.add( 'faded' );
-
-			this.setState( () => { loaded: true });
+			this.mainRef = React.createRef();
 
 		}
 
-	}
+		componentDidMount() {
 
-	render() {
+			const { loaded } = this.state;
 
-		return <div>
+			if ( ! loaded ) {
 
+				const $el = this.mainRef.current;
 
+				$el.classList.add( 'faded' );
 
-		</div>
+				this.setState( () => { loaded: true });
+
+			}
+
+		}
+
+		render() {
+
+			return <div className="fade-in" ref={this.mainRef}>
+
+				<Wrapped {...this.props} {...this.state}  />
+
+			</div>
+
+		}
 
 	}
 
