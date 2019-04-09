@@ -50,7 +50,7 @@ module.exports = {
 					}
 				}
 			}, {
-				test: /\.(ttf|eot|woff|woff2|svg)$/,
+				test: /\.(otf|ttf|eot|woff|woff2|svg)$/,
 				include: /src\/assets\/fonts/,
 				exclude: /src\/assets\/icons/,
 				use: {
@@ -60,7 +60,7 @@ module.exports = {
 					}
 				}
 			}, {
-				test: /\.(ttf|eot|woff|woff2|svg)$/,
+				test: /\.(otf|ttf|eot|woff|woff2|svg)$/,
 				include: /src\/assets\/icons/,
 				exclude: /src\/assets\/fonts/,
 				use: {
