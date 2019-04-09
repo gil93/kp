@@ -35,12 +35,57 @@ module.exports = {
 					'sass-loader'
 				]
 			}, {
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					'css-loader'
+				]
+			}, {
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
 					options: {
 						babelrc: true
+					}
+				}
+			}, {
+				test: /\.(ttf|eot|woff|woff2|svg)$/,
+				include: /src\/assets\/fonts/,
+				exclude: /src\/assets\/icons/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'assets/fonts/[name].[ext]'
+					}
+				}
+			}, {
+				test: /\.(ttf|eot|woff|woff2|svg)$/,
+				include: /src\/assets\/icons/,
+				exclude: /src\/assets\/fonts/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'assets/icons/[name].[ext]'
+					}
+				}
+			}, {
+				test: /\.(svg|jpg|png|gif)$/,
+				include: /src\/assets\/images/,
+				exclude: /(src\/assets\/fonts|src\/assets\/icons)/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'assets/images/[name].[ext]'
+					}
+				}
+			}, {
+				test: /\.(mov|mp4)$/,
+				include: /src\/assets\/videos/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						name: 'assets/videos/[name].[ext]'
 					}
 				}
 			}
