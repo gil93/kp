@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 
-import Video from './app/video';
-
-import Intro from './app/intro';
-
 export default class App extends Component {
+
+	// https://reactjs.org/docs/higher-order-components.html
 
 	constructor( props ) {
 
@@ -38,11 +36,9 @@ export default class App extends Component {
 
 	render() {
 
-		return <div ref={this.mainRef} className="main fade-in">
+		return <div>
 
-			<Video />
 
-			<Intro />
 
 		</div>
 
