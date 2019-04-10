@@ -1,0 +1,38 @@
+.fade-in,
+.fade-right {
+	transform: translateY(-25px);
+	opacity: 0;
+}
+.fade-in {
+	&.faded {
+		animation: faded-in .3s forwards ease-out;
+	}
+}
+
+.fade-right {
+	&.faded {
+		animation: faded-right .3s forwards ease-out;
+	}
+}
+
+@keyframes faded-in {
+	from {
+		transform: translateY(-25px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes faded-right {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}

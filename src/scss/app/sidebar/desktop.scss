@@ -1,0 +1,11 @@
+@media (min-width: 1025px) {
+	.sidebar-fade-in {
+		width: 33.333%;
+	}
+}
+@media (max-width: 1024px) {
+	.sidebar-fade-in {
+		position: static;
+		transform: none;
+	}
+}

@@ -1,4 +1,25 @@
-@import "./app/global.scss";
-@import "./app/desktop.scss";
-@import "./app/tablet.scss";
-@import "./app/mobile.scss";
+@import "./vendor/normalize.scss";
+
+@import "./mixins.scss";
+
+@import "./colors.scss";
+
+@import "./typography.scss";
+
+@import "./util.scss";
+
+@import "./app/fade-in/main.scss";
+
+@import "./app/main/main.scss";
+
+@import "./app/video/main.scss";
+
+@import "./app/intro/main.scss";
+
+@import "./app/sidebar/main.scss";
+
+@import "./app/section/main.scss";
+
+@import "./app/button/main.scss";
+
+@import "./app/footer/main.scss";

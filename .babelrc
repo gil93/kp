@@ -8,6 +8,7 @@
 	],
 	"plugins": [
 		"@babel/plugin-syntax-object-rest-spread",
+		["@babel/plugin-proposal-decorators", { "legacy": true }],
 		"@babel/plugin-transform-runtime"
 	]
 }

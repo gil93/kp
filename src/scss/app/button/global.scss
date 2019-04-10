@@ -1,0 +1,94 @@
+.button {
+	width: 160px;
+	padding: 15px 25px;
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: $jost-book;
+	font-size: 14px;
+	line-height: 21px;
+	text-align: center;
+	overflow: hidden;
+	transition: background-color .3s ease-out;
+	-webkit-font-smoothing: antialiased;
+
+	span {
+		display: block;
+	}
+	&.changeText {
+		span {
+			animation: changeInText .3s ease-out;
+		}
+		&:hover {
+			span {
+				animation: changeOutText .3s ease-out;
+			}
+		}
+	}
+	&.orange {
+		background-color: $orange;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $orange, 50% );
+		}
+	}
+	&.light-orange {
+		background-color: $light-orange;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $light-orange, 50% );
+		}
+	}
+	&.pink {
+		background-color: $pink;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $pink, 50% );
+		}
+	}
+	&.magenta {
+		background-color: $magenta;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $magenta, 50% );
+		}
+	}
+	&.purple {
+		background-color: $purple;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $purple, 50% );
+		}
+	}
+	&.blue {
+		background-color: $blue;
+
+		&:hover {
+			@include alpha-attribute( 'background-color', rgba(black, 0.5), $blue, 50% );
+		}
+	}
+}
+
+@keyframes changeInText {
+	0% {
+		transform: translateY(-8px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes changeOutText {
+	0% {
+		transform: translateY(-8px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}

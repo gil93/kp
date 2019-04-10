@@ -1,0 +1,26 @@
+.section-fade-in {
+	@include animation-delay( .2, .6 );
+}
+
+.section {
+	margin-bottom: 30px;
+
+	video {
+		display: block;
+		width: 100%;
+	}
+	.button {
+		padding: 8px;
+	}
+	.title {
+		margin-top: 0px;
+	}
+	.caption {
+		margin: 5px 0;
+		font-family: $jost-light;
+		font-size: 12px;
+		line-height: 18px;
+		color: #999;
+		text-transform: uppercase;
+	}
+}
