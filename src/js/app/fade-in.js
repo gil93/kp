@@ -2,43 +2,57 @@ import React, { Component } from 'react';
 
 import ReactDOM from 'react-dom';
 
-export default function FadeIn( Wrapped ) {
+export default overrideProps => {
 
-	return class HOC extends Component {
+	return Wrapped => {
 
-		constructor( props ) {
+		return class HOC extends Component {
 
-			super( props );
+			constructor( props ) {
 
-			this.state = { ...props, loaded: false };
+				super( props );
 
-			this.mainRef = React.createRef();
+				this.state = {
 
-		}
+					...props,
+					loaded: false,
+					direction: 'fade-in',
+					style: '',
+					...overrideProps
 
-		componentDidMount() {
+				};
 
-			const { loaded } = this.state;
-
-			if ( ! loaded ) {
-
-				const $el = this.mainRef.current;
-
-				$el.classList.add( 'faded' );
-
-				this.setState( () => { loaded: true });
+				this.mainRef = React.createRef();
 
 			}
 
-		}
+			componentDidMount() {
 
-		render() {
+				const { loaded } = this.state;
 
-			return <div className="fade-in" ref={this.mainRef}>
+				if ( ! loaded ) {
 
-				<Wrapped {...this.props} {...this.state}  />
+					const $el = this.mainRef.current;
 
-			</div>
+					$el.classList.add( 'faded' );
+
+					this.setState( () => { loaded: true });
+
+				}
+
+			}
+
+			render() {
+
+				const classNames = `${this.state.direction} ${this.state.style} ${this.state.name}-fade-in`;
+
+				return <div className={classNames} ref={this.mainRef}>
+
+					<Wrapped {...this.props} {...this.state}  />
+
+				</div>
+
+			}
 
 		}
 
