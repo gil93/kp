@@ -1,6 +1,21 @@
 @mixin alpha-attribute($attribute, $color, $background, $percent) {
-  $percent: alpha($color) * $percent;
-  $opaque: opacify($color, 1);
-  $solid-color: mix($opaque, $background, $percent);
-  #{$attribute}: $solid-color;
+
+	$percent: alpha($color) * $percent;
+	$opaque: opacify($color, 1);
+	$solid-color: mix($opaque, $background, $percent);
+
+	#{$attribute}: $solid-color;
+
+}
+
+@mixin animation-delay( $multiplier, $offset ) {
+
+	@for $i from 1 through 4 {
+
+		&:nth-child(#{$i}) {
+			animation-delay: #{( $i * $multiplier ) + $offset}s
+		}
+
+	}
+
 }

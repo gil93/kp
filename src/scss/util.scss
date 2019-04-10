@@ -6,12 +6,21 @@
 }
 
 body {
-	font-family: "Jost-Book";
+	color: $black;
+	font-family: $roboto;
 	font-size: 14px;
 	line-height: 21px;
 }
 
+@media (min-width: 1025px) {
+	body {
+		overflow: hidden;
+	}
+}
+
 h1, h2, h3, h4, h5, h6 {
+	font-family: $playfair;
+	font-weight: 100;
 	margin-bottom: 15px;
 }
 
@@ -51,6 +60,12 @@ h6,
 	line-height: 18px;
 }
 
+img {
+	display: block;
+	width: 100%;
+}
+
 a {
 	display: inline-block;
+	cursor: pointer;
 }
