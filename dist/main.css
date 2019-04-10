@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Playfair+Display|Roboto);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -315,34 +315,10 @@ template {
   font-style: normal; }
 
 @font-face {
-  font-family: "Jost-Light-Italic";
-  src: url(assets/fonts/jost-300-lightitalic.ttf) format("truetype"), url(assets/fonts/jost-300-lightitalic.otf) format("opentype");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
   font-family: "Jost-Book";
   src: url(assets/fonts/jost-400-book.ttf) format("truetype"), url(assets/fonts/jost-400-book.otf) format("opentype");
   font-weight: 400;
   font-style: normal; }
-
-@font-face {
-  font-family: "Jost-Book-Italic";
-  src: url(assets/fonts/jost-400-bookitalic.ttf) format("truetype"), url(assets/fonts/jost-400-bookitalic.otf) format("opentype");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Jost-Bold";
-  src: url(assets/fonts/jost-700-bold.ttf) format("truetype"), url(assets/fonts/jost-700-bold.otf) format("opentype");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Jost-Bold-Italic";
-  src: url(assets/fonts/jost-700-bolditalic.ttf) format("truetype"), url(assets/fonts/jost-700-bolditalic.otf) format("opentype");
-  font-weight: 700;
-  font-style: italic; }
 
 *,
 *:before,
@@ -352,7 +328,7 @@ template {
 
 body {
   color: #333;
-  font-family: "Roboto", sans-serif;
+  font-family: "Jost-Light";
   font-size: 14px;
   line-height: 21px; }
 
