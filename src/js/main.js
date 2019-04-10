@@ -43,26 +43,17 @@ export default class App extends Component {
 
 				targets: $spinner.getElementsByClassName( 'dot' ),
 				translateY: -25,
+				rotate: '360deg',
+				borderRadius: '0%',
 				direction: 'alternate',
 				easing: 'easeOutElastic(1, .6)',
-				// loop: 4,
-				loop: 0,
+				loop: 1,
 				delay: anime.stagger( 300, { start: 300 } ),
 				complete: () => {
 
-					anime({
+					this.setState( () => ({ loaded: true }));
 
-						targets: $spinner,
-						opacity: 0,
-						duration: .5,
-						easing: 'linear',
-						complete: () => {
-
-							this.setState( () => ({ loaded: true } ));
-
-						}
-
-					})
+					$spinner.classList.add( 'spun' )
 
 				}
 
