@@ -12,6 +12,7 @@ export default class Button extends Component {
 
 		this.state = {
 
+			href: 'javascript:void(0);',
 			text: 'This is a button',
 			currentText: 'This is a button',
 			color: 'blue',
@@ -89,7 +90,7 @@ export default class Button extends Component {
 
 		return <a
 
-			href="javascript:void(0);"
+			href={this.state.href}
 			className={className}
 			onClick={this.handleClick}
 			onMouseOver={this.handleMouseOver}
