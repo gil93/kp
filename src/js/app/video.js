@@ -12,7 +12,7 @@ export default class App extends Component {
 
 		return <div className="video">
 
-			<video autoPlay preload='auto' loop muted playsInline poster={thumb}>
+			<video autoPlay loop muted playsInline poster={thumb}>
 
 				<source src={saigon} />
 
