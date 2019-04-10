@@ -1,0 +1,52 @@
+.sidebar-fade-in {
+	background-color: $white;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	max-width: 480px;
+	padding: 30px;
+	overflow-y: scroll;
+	transform: translateX(100%);
+
+	&.fade-right {
+		animation-delay: 1s;
+	}
+}
+.sidebar {
+	.contact {
+		border-top: 1px solid $black;
+
+		h3 {
+			margin-bottom: 15px;
+			font-family: $jost-light;
+			font-size: 14px;
+			line-height: 21px;
+			text-transform: uppercase;
+		}
+		h5 {
+			margin-top: 0px;
+			line-height: 24px;
+		}
+		a {
+			display: block;
+			color: $black;
+			margin-bottom: 8px;
+
+			h5 {
+				margin: 0px;
+			}
+		}
+		.phone {
+			text-decoration: none;
+		}
+	}
+}
+@keyframes sidebar-faded {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
