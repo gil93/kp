@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+	.intro-fade-in {
+		position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    width: 100%;
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: 56.25%;
+		}
+	}
+	.intro {
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		color: $white;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.intro {
+		bottom: 50%;
+		transform: translateY(50%);
+	}
+}

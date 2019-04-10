@@ -6,7 +6,12 @@ import Button from './button';
 
 import FadeIn from './fade-in';
 
-@FadeIn
+@FadeIn({
+
+	style: 'absolute',
+	name: 'intro'
+
+})
 
 class Intro extends Component {
 
@@ -14,9 +19,15 @@ class Intro extends Component {
 
 		return <div className="intro">
 
+			<h5 className="sub-header">
+
+				Welcome to King & Partners Fun
+
+			</h5>
+
 			<h1 className="title">
 
-				Gil is trying his very best
+				Gil Is Awesome
 
 			</h1>
 
